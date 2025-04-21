@@ -1,0 +1,42 @@
+.custom-input {
+  position: relative;
+  $root: &;
+
+  &--error .custom-input__field {
+    border-color: $color-orange-red;
+  }
+
+  &__error {
+    font-size: 10px;
+    line-height: 10px;
+    color: $color-orange-red;
+    position: absolute;
+    top: 108%;
+    left: 45%;
+    transform: translate(-44%, -27%);
+  }
+
+  &__field {
+    border: 1px solid transparent;
+    background-color: rgba($color-jaguar, .05);
+    border-radius: 200px;
+    font-size: 17px;
+    line-height: 1.5;
+    padding: 15px 20px;
+    width: 100%;
+    outline: none;
+    transition: $transition-300;
+
+    &:hover {
+      background-color: $color-silver;
+    }
+
+    &::placeholder {
+      color: rgba($color-jaguar, 0.3);
+    }
+  }
+
+  &:required {
+    border: 1px solid $color-orange-red;
+  }
+}
